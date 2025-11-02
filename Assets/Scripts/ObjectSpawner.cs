@@ -5,16 +5,16 @@ using UnityEngine.XR.ARSubsystems;
 
 public class PlanetSpawner : MonoBehaviour
 {
-    public ARRaycastManager raycastManager;
+    public ARRaycastManager raycastManager; 
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    private GameObject currentPlanetPrefab = null;
+    private GameObject currentPlanetPrefab = null; 
     private List<GameObject> spawnedPlanets = new List<GameObject>(); 
 
     public void SetPlanetPrefab(GameObject planetPrefab)
     {
         currentPlanetPrefab = planetPrefab;
-        Debug.Log("Planeta seleccionado: " + planetPrefab.name);
+        Debug.Log(" Planeta seleccionado: " + planetPrefab.name);
     }
 
     void Update()
@@ -27,22 +27,25 @@ public class PlanetSpawner : MonoBehaviour
             {
                 if (raycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon))
                 {
-                    var hitPose = hits[0].pose;
+                    Pose hitPose = hits[0].pose;
 
                     if (currentPlanetPrefab != null)
                     {
                         GameObject newPlanet = Instantiate(currentPlanetPrefab, hitPose.position, hitPose.rotation);
+
+                        newPlanet.transform.parent = null;
+
                         spawnedPlanets.Add(newPlanet);
+                        Debug.Log(" Planeta agregado. Total en lista: " + spawnedPlanets.Count);
                     }
                     else
                     {
-                        Debug.LogWarning("No se ha seleccionado ningún planeta.");
+                        Debug.LogWarning(" No se ha seleccionado ningún planeta.");
                     }
                 }
             }
         }
     }
-
 
     public void DeleteLastPlanet()
     {
@@ -51,11 +54,13 @@ public class PlanetSpawner : MonoBehaviour
             GameObject lastPlanet = spawnedPlanets[spawnedPlanets.Count - 1];
             Destroy(lastPlanet);
             spawnedPlanets.RemoveAt(spawnedPlanets.Count - 1);
-            Debug.Log("Último planeta eliminado.");
+            Debug.Log(" Último planeta eliminado. Restan: " + spawnedPlanets.Count);
         }
         else
         {
-            Debug.Log("No hay planetas para eliminar.");
+            Debug.Log(" No hay planetas para eliminar.");
         }
     }
+
+  
 }
