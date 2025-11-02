@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+using UnityEngine.SceneManagement;
 
 public class PlanetUIManager : MonoBehaviour
 {
-    public ObjectSpawner objectSpawner; // Asignar en el inspector
+    public ObjectSpawner objectSpawner; 
 
     private void SpawnPlanet(int prefabIndex)
     {
@@ -28,12 +29,17 @@ public class PlanetUIManager : MonoBehaviour
     public void SpawnUranus() { SpawnPlanet(8); }
     public void SpawnVenus() { SpawnPlanet(9); }
 
-    // Opción aleatoria
+   
     public void SpawnRandom()
     {
         if (objectSpawner != null)
         {
             objectSpawner.RandomizeSpawnOption();
         }
+    }
+
+    public void OnMenuPressed()
+    {
+       SceneManager.LoadScene("Menu");
     }
 }
