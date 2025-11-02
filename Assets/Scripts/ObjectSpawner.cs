@@ -25,7 +25,7 @@ public class PlanetSpawner : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
-                // Instanciar un nuevo planeta en la posición tocada sobre el plano
+               
                 if (raycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon))
                 {
                     Pose hitPose = hits[0].pose;
