@@ -156,8 +156,8 @@ MonoBehaviour:
   - {fileID: 8184402059649760781, guid: 69a166f8197ee624bb0990e3ca197478, type: 3}
   - {fileID: 6874476552357401769, guid: ea30556a628c6d1448f7ff259970bf08, type: 3}
   - {fileID: 4064418588338587280, guid: cd14002b256258c409e9d7c73ddc725b, type: 3}
-  - {fileID: 3676569655459772744, guid: 7668c063521ea524ea8a77e8c86336c1, type: 3}
-  - {fileID: 7671400497506176901, guid: 022f0504462f60645be33e88fa718502, type: 3}
+  - {fileID: 8451223669235227449, guid: c1b075213322a4643987c3dfd61270af, type: 3}
+  - {fileID: 8200702441370580399, guid: fe0c00355fcac6449b2e2444a77397b3, type: 3}
   - {fileID: 5576213513776438552, guid: d2f4fd794db25964ea6df17691219bc8, type: 3}
   - {fileID: 2276934845965612232, guid: f9f23ed6ba0c4f44e8a8cd69117f3a6d, type: 3}
 --- !u!4 &75079297
@@ -512,14 +512,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CameraToFace: {fileID: 0}
   m_ObjectPrefabs:
-  - {fileID: 8352121362829413796, guid: 97efee2833c96c84d928f15657129980, type: 3}
+  - {fileID: 971579753493127363, guid: 74afa838a089b954ca2c3818dccb05e5, type: 3}
   - {fileID: 2642513850699336294, guid: 3d5f980a2d5950743878e7de4f237645, type: 3}
   - {fileID: 9128802428508363154, guid: c4a75f03bb8f4d04fa5e0b7e9b1968c6, type: 3}
   - {fileID: 8184402059649760781, guid: 69a166f8197ee624bb0990e3ca197478, type: 3}
   - {fileID: 6874476552357401769, guid: ea30556a628c6d1448f7ff259970bf08, type: 3}
   - {fileID: 4064418588338587280, guid: cd14002b256258c409e9d7c73ddc725b, type: 3}
-  - {fileID: 3676569655459772744, guid: 7668c063521ea524ea8a77e8c86336c1, type: 3}
-  - {fileID: 7671400497506176901, guid: 022f0504462f60645be33e88fa718502, type: 3}
+  - {fileID: 8451223669235227449, guid: c1b075213322a4643987c3dfd61270af, type: 3}
+  - {fileID: 8200702441370580399, guid: fe0c00355fcac6449b2e2444a77397b3, type: 3}
   - {fileID: 5576213513776438552, guid: d2f4fd794db25964ea6df17691219bc8, type: 3}
   - {fileID: 2276934845965612232, guid: f9f23ed6ba0c4f44e8a8cd69117f3a6d, type: 3}
   m_SpawnVisualizationPrefab: {fileID: 0}
@@ -539,8 +539,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 237852452}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -4,11 +4,9 @@ public class PlanetRotation : MonoBehaviour
 {
     public float planetRotation;
 
-    public void SetRotation()
+    void Update()
     {
         transform.Rotate(Vector3.up, planetRotation * Time.deltaTime);
     }
-
-
-    }
+}
 

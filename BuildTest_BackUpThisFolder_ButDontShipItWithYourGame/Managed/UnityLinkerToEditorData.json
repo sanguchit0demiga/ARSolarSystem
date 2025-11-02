@@ -182,9 +182,7 @@
           },
           {
             "name": "LODGroup",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
@@ -952,9 +950,7 @@
           },
           {
             "name": "Rigidbody",
-            "scenes": [
-              "Assets/Scenes/SampleScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },

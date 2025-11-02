@@ -5,12 +5,12 @@ using UnityEngine.XR.ARSubsystems;
 
 public class PlanetSpawner : MonoBehaviour
 {
-    public ARRaycastManager raycastManager; // ARRaycastManager de tu AR Session Origin
+    public ARRaycastManager raycastManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    private GameObject currentPlanetPrefab = null; // El planeta seleccionado por UI
+    private GameObject currentPlanetPrefab = null;
+    private List<GameObject> spawnedPlanets = new List<GameObject>(); 
 
-    // Este método se llama desde el selector/UI
     public void SetPlanetPrefab(GameObject planetPrefab)
     {
         currentPlanetPrefab = planetPrefab;
@@ -30,11 +30,32 @@ public class PlanetSpawner : MonoBehaviour
                     var hitPose = hits[0].pose;
 
                     if (currentPlanetPrefab != null)
-                        Instantiate(currentPlanetPrefab, hitPose.position, hitPose.rotation);
+                    {
+                        GameObject newPlanet = Instantiate(currentPlanetPrefab, hitPose.position, hitPose.rotation);
+                        spawnedPlanets.Add(newPlanet);
+                    }
                     else
+                    {
                         Debug.LogWarning("No se ha seleccionado ningún planeta.");
+                    }
                 }
             }
+        }
+    }
+
+
+    public void DeleteLastPlanet()
+    {
+        if (spawnedPlanets.Count > 0)
+        {
+            GameObject lastPlanet = spawnedPlanets[spawnedPlanets.Count - 1];
+            Destroy(lastPlanet);
+            spawnedPlanets.RemoveAt(spawnedPlanets.Count - 1);
+            Debug.Log("Último planeta eliminado.");
+        }
+        else
+        {
+            Debug.Log("No hay planetas para eliminar.");
         }
     }
 }
