@@ -1,20 +1,20 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
 public class PlanetSpawner : MonoBehaviour
 {
-    public ARRaycastManager raycastManager; 
+    public ARRaycastManager raycastManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
-    private GameObject currentPlanetPrefab = null; 
-    private List<GameObject> spawnedPlanets = new List<GameObject>(); 
+    private GameObject currentPlanetPrefab = null;
+    private List<GameObject> spawnedPlanets = new List<GameObject>();
 
     public void SetPlanetPrefab(GameObject planetPrefab)
     {
         currentPlanetPrefab = planetPrefab;
-        Debug.Log(" Planeta seleccionado: " + planetPrefab.name);
+        Debug.Log("Planeta seleccionado: " + planetPrefab.name);
     }
 
     void Update()
@@ -25,6 +25,7 @@ public class PlanetSpawner : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
+                // Instanciar un nuevo planeta en la posición tocada sobre el plano
                 if (raycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon))
                 {
                     Pose hitPose = hits[0].pose;
@@ -32,15 +33,14 @@ public class PlanetSpawner : MonoBehaviour
                     if (currentPlanetPrefab != null)
                     {
                         GameObject newPlanet = Instantiate(currentPlanetPrefab, hitPose.position, hitPose.rotation);
-
                         newPlanet.transform.parent = null;
 
                         spawnedPlanets.Add(newPlanet);
-                        Debug.Log(" Planeta agregado. Total en lista: " + spawnedPlanets.Count);
+                        Debug.Log("Planeta agregado. Total en lista: " + spawnedPlanets.Count);
                     }
                     else
                     {
-                        Debug.LogWarning(" No se ha seleccionado ning�n planeta.");
+                        Debug.LogWarning("No se ha seleccionado ningún planeta.");
                     }
                 }
             }
@@ -54,13 +54,11 @@ public class PlanetSpawner : MonoBehaviour
             GameObject lastPlanet = spawnedPlanets[spawnedPlanets.Count - 1];
             Destroy(lastPlanet);
             spawnedPlanets.RemoveAt(spawnedPlanets.Count - 1);
-            Debug.Log(" �ltimo planeta eliminado. Restan: " + spawnedPlanets.Count);
+            Debug.Log("Último planeta eliminado. Restan: " + spawnedPlanets.Count);
         }
         else
         {
-            Debug.Log(" No hay planetas para eliminar.");
+            Debug.Log("No hay planetas para eliminar.");
         }
     }
-
-  
 }

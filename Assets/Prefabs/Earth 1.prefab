@@ -4860,6 +4860,7 @@ GameObject:
   - component: {fileID: 940053754014530463}
   - component: {fileID: 948146472839155467}
   - component: {fileID: -7632090631556127390}
+  - component: {fileID: -3307120880562602231}
   m_Layer: 0
   m_Name: Earth 1
   m_TagString: Planet
@@ -4876,8 +4877,8 @@ Transform:
   m_GameObject: {fileID: 971579753493127363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.79, y: 0, z: -0.30407}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 863.853, y: 0, z: 7203.299}
+  m_LocalScale: {x: 0.2058, y: 0.2058, z: 0.2058}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 967352487609213171}
@@ -4952,3 +4953,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetRotation
   planetRotation: 20
+--- !u!135 &-3307120880562602231
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971579753493127363}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.2170396
+  m_Center: {x: -0.00000023841858, y: 0, z: -0.21703815}
