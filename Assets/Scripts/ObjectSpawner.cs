@@ -5,6 +5,8 @@ using UnityEngine.XR.ARSubsystems;
 
 public class PlanetSpawner : MonoBehaviour
 {
+    public PlanetInfo lastSpawnedPlanet;
+
     public ARRaycastManager raycastManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
@@ -33,9 +35,12 @@ public class PlanetSpawner : MonoBehaviour
                     if (currentPlanetPrefab != null)
                     {
                         GameObject newPlanet = Instantiate(currentPlanetPrefab, hitPose.position, hitPose.rotation);
-                        newPlanet.transform.parent = null;
 
+                        lastSpawnedPlanet = newPlanet.GetComponent<PlanetInfo>();
+
+                        newPlanet.transform.parent = null;
                         spawnedPlanets.Add(newPlanet);
+
                         Debug.Log("Planeta agregado. Total en lista: " + spawnedPlanets.Count);
                     }
                     else

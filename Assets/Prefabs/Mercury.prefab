@@ -4860,6 +4860,7 @@ GameObject:
   - component: {fileID: 8206939199533591019}
   - component: {fileID: 8196605547451974819}
   - component: {fileID: -2401040557268297850}
+  - component: {fileID: -8620549959020118234}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Planet
@@ -4952,3 +4953,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetRotation
   planetRotation: 10
+--- !u!114 &-8620549959020118234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8184402059649760781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b70658cbec3604089d515235f7ab2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
+  planetName: Mercury
+  description: 

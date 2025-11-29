@@ -4860,6 +4860,7 @@ GameObject:
   - component: {fileID: 9133869212101701150}
   - component: {fileID: 9142309844564757638}
   - component: {fileID: -637878346022808713}
+  - component: {fileID: 2089699701125996978}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Planet
@@ -4952,3 +4953,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetRotation
   planetRotation: 15
+--- !u!114 &2089699701125996978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128802428508363154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b70658cbec3604089d515235f7ab2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
+  planetName: Mars
+  description: 

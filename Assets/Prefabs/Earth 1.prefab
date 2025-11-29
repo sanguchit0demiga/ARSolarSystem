@@ -4861,6 +4861,7 @@ GameObject:
   - component: {fileID: 948146472839155467}
   - component: {fileID: -7632090631556127390}
   - component: {fileID: -3307120880562602231}
+  - component: {fileID: -8960014396766837941}
   m_Layer: 0
   m_Name: Earth 1
   m_TagString: Planet
@@ -4974,3 +4975,17 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.2170396
   m_Center: {x: -0.00000023841858, y: 0, z: -0.21703815}
+--- !u!114 &-8960014396766837941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971579753493127363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b70658cbec3604089d515235f7ab2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
+  planetName: Earth
+  description: sad

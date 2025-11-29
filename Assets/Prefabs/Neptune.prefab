@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4040576489833791458}
   - component: {fileID: 4048975998198099024}
   - component: {fileID: 1152717293651541895}
+  - component: {fileID: -5995734055638460459}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Planet
@@ -104,6 +105,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetRotation
   planetRotation: 25
+--- !u!114 &-5995734055638460459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064418588338587280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b70658cbec3604089d515235f7ab2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
+  planetName: Neptune
+  description: 
 --- !u!1 &8412215077601465665
 GameObject:
   m_ObjectHideFlags: 0
