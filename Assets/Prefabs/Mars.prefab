@@ -4966,4 +4966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
   planetName: Mars
-  description: 
+  description: Mars is called the Red Planet because of its rusty soil. Scientists
+    think it may have had water long ago.
+  planetImage: {fileID: 21300000, guid: fededcb25fe4c07479d095ca9de8901c, type: 3}

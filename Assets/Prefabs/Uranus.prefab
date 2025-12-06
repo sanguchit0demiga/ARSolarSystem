@@ -118,7 +118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
   planetName: Uranus
-  description: 
+  description: Uranus is a cold, blue-green planet that rotates on its side. It is
+    made of gas and ice.
+  planetImage: {fileID: 21300000, guid: 25430c9a86f694c46835a145ff208e45, type: 3}
 --- !u!1 &9115120417486917520
 GameObject:
   m_ObjectHideFlags: 0

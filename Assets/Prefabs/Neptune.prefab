@@ -118,7 +118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
   planetName: Neptune
-  description: 
+  description: Neptune is the farthest planet from the Sun. It is very cold and has
+    strong winds.
+  planetImage: {fileID: 21300000, guid: 08c3d13db5acc6848aa49fc156404854, type: 3}
 --- !u!1 &8412215077601465665
 GameObject:
   m_ObjectHideFlags: 0

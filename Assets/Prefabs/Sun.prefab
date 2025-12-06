@@ -14687,4 +14687,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
   planetName: Sun
-  description: 
+  description: The Sun is a giant star made of hot gas. It gives light and heat to
+    all the planets in the Solar System.
+  planetImage: {fileID: 21300000, guid: 5e3e9b7de157b494aa03a1f768982b57, type: 3}

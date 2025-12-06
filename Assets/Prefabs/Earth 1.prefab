@@ -4988,4 +4988,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
   planetName: Earth
-  description: sad
+  description: Earth is our home. It has water, air, and life. It is the only known
+    planet where humans can live.
+  planetImage: {fileID: 21300000, guid: e2e9e561e7c976d4da4db8a63a7d42d6, type: 3}

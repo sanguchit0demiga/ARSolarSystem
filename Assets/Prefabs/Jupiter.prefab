@@ -4966,4 +4966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
   planetName: Jupiter
-  description: si
+  description: Jupiter is the largest planet. It is made of gas and has a huge storm
+    called the Great Red Spot.
+  planetImage: {fileID: 21300000, guid: 048e4fc958b131b49bd520afa12183b4, type: 3}
