@@ -4861,7 +4861,6 @@ GameObject:
   - component: {fileID: 2664118778046496430}
   - component: {fileID: -1864725281503417337}
   - component: {fileID: -8246648683690921161}
-  - component: {fileID: -5704428960159749267}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Planet
@@ -4970,15 +4969,3 @@ MonoBehaviour:
   description: Jupiter is the largest planet. It is made of gas and has a huge storm
     called the Great Red Spot.
   planetImage: {fileID: 21300000, guid: 048e4fc958b131b49bd520afa12183b4, type: 3}
---- !u!114 &-5704428960159749267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2642513850699336294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1adef81977b325340bdd17f1665eab91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlanetController

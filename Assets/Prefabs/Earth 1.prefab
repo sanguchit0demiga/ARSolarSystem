@@ -4862,7 +4862,6 @@ GameObject:
   - component: {fileID: -7632090631556127390}
   - component: {fileID: -3307120880562602231}
   - component: {fileID: -8960014396766837941}
-  - component: {fileID: 7409599449496262226}
   m_Layer: 0
   m_Name: Earth 1
   m_TagString: Planet
@@ -4992,15 +4991,3 @@ MonoBehaviour:
   description: Earth is our home. It has water, air, and life. It is the only known
     planet where humans can live.
   planetImage: {fileID: 21300000, guid: e2e9e561e7c976d4da4db8a63a7d42d6, type: 3}
---- !u!114 &7409599449496262226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971579753493127363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1adef81977b325340bdd17f1665eab91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlanetController

@@ -1,33 +1,69 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class PlanetSpawner : MonoBehaviour
 {
-    public List<GameObject> objectPrefabs; // lista de prefabs de planetas
-    public GameObject selectedPlanetObject;
+    public PlanetInfo lastSpawnedPlanet;
 
+    public ARRaycastManager raycastManager;
+    private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
+
+    private GameObject currentPlanetPrefab = null;
     private List<GameObject> spawnedPlanets = new List<GameObject>();
 
-    // Método para spawnear un planeta aleatorio
-    public void RandomizeSpawnOption()
+    public void SetPlanetPrefab(GameObject planetPrefab)
     {
-        if (objectPrefabs.Count == 0) return;
+        currentPlanetPrefab = planetPrefab;
+        Debug.Log("Planeta seleccionado: " + planetPrefab.name);
+    }
 
-        int index = Random.Range(0, objectPrefabs.Count);
-        GameObject prefab = objectPrefabs[index];
-        GameObject newPlanet = Instantiate(prefab, Vector3.zero, Quaternion.identity);
-        spawnedPlanets.Add(newPlanet);
-
-        selectedPlanetObject = newPlanet;
-
-        PlanetController pc = newPlanet.GetComponent<PlanetController>();
-        if (pc != null)
+    void Update()
+    {
+        if (Input.touchCount > 0)
         {
-            GlobalPlanetSlider slider = Object.FindFirstObjectByType<GlobalPlanetSlider>();
-            if (slider != null)
-                slider.SetSelectedPlanet(pc);
-        }
+            Touch touch = Input.GetTouch(0);
 
-        Debug.Log("Planeta aleatorio spawneado: " + newPlanet.name);
+            if (touch.phase == TouchPhase.Began)
+            {
+               
+                if (raycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon))
+                {
+                    Pose hitPose = hits[0].pose;
+
+                    if (currentPlanetPrefab != null)
+                    {
+                        GameObject newPlanet = Instantiate(currentPlanetPrefab, hitPose.position, hitPose.rotation);
+
+                        lastSpawnedPlanet = newPlanet.GetComponent<PlanetInfo>();
+
+                        newPlanet.transform.parent = null;
+                        spawnedPlanets.Add(newPlanet);
+
+                        Debug.Log("Planeta agregado. Total en lista: " + spawnedPlanets.Count);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("No se ha seleccionado ningún planeta.");
+                    }
+                }
+            }
+        }
+    }
+
+    public void DeleteLastPlanet()
+    {
+        if (spawnedPlanets.Count > 0)
+        {
+            GameObject lastPlanet = spawnedPlanets[spawnedPlanets.Count - 1];
+            Destroy(lastPlanet);
+            spawnedPlanets.RemoveAt(spawnedPlanets.Count - 1);
+            Debug.Log("Último planeta eliminado. Restan: " + spawnedPlanets.Count);
+        }
+        else
+        {
+            Debug.Log("No hay planetas para eliminar.");
+        }
     }
 }
