@@ -3,7 +3,8 @@ using TMPro;
 
 public class MenuDesplegableSimple : MonoBehaviour
 {
-    public GameObject contenido;
+    public GameObject contenido;        
+    public GameObject panelControles;   
     public TMP_Text botonTexto;
 
     private bool open = false;
@@ -11,11 +12,10 @@ public class MenuDesplegableSimple : MonoBehaviour
     public void ToggleMenu()
     {
         open = !open;
-        contenido.SetActive(open);
 
-        if (open)
-            botonTexto.text = "CLOSE ";
-        else
-            botonTexto.text = "OPEN ";
+        contenido.SetActive(open);
+        panelControles.SetActive(!open);
+
+        botonTexto.text = open ? "CLOSE" : "OPEN";
     }
 }

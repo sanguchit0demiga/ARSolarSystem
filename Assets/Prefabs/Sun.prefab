@@ -14559,6 +14559,7 @@ GameObject:
   - component: {fileID: 3247872376629034510}
   - component: {fileID: 4047028779056823012}
   - component: {fileID: -972775925178749066}
+  - component: {fileID: -8293486908727628285}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Planet
@@ -14690,3 +14691,15 @@ MonoBehaviour:
   description: The Sun is a giant star made of hot gas. It gives light and heat to
     all the planets in the Solar System.
   planetImage: {fileID: 21300000, guid: 5e3e9b7de157b494aa03a1f768982b57, type: 3}
+--- !u!114 &-8293486908727628285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8200702441370580399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adef81977b325340bdd17f1665eab91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetController

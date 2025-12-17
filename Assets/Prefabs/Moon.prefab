@@ -4861,6 +4861,7 @@ GameObject:
   - component: {fileID: 6860852867975987339}
   - component: {fileID: -2257983477246724168}
   - component: {fileID: -5717126799198304554}
+  - component: {fileID: 122527432704168585}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Planet
@@ -4966,7 +4967,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlanetInfo
   planetName: Moon
-  description: "The Moon is Earth\u2019s only natural satellite.\nIt affects ocean
-    tides and is the fifth-largest moon in the Solar System.\nIts surface is covered
+  description: "The Moon is Earth\u2019s only natural satellite.\n\nIt affects ocean
+    tides and is the fifth-largest moon in the Solar System.\n\nIts surface is covered
     with craters, mountains, and dark plains"
   planetImage: {fileID: 21300000, guid: 48206a869beaf0d49a0df701b74c0336, type: 3}
+--- !u!114 &122527432704168585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6874476552357401769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adef81977b325340bdd17f1665eab91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlanetController
