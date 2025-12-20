@@ -11,8 +11,7 @@ public class PlanetSpawner : MonoBehaviour
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private GameObject currentPlanetPrefab = null;
 
-    // Mantenemos la lista solo para cuando queramos borrar el último, 
-    // pero para los sliders usaremos Tags.
+   
     private List<GameObject> spawnedPlanets = new List<GameObject>();
 
     [Header("Configuración de UI")]
@@ -38,12 +37,10 @@ public class PlanetSpawner : MonoBehaviour
                     {
                         GameObject newPlanet = Instantiate(currentPlanetPrefab, hitPose.position, hitPose.rotation);
 
-                        // Aseguramos que tenga el TAG correcto por si olvidaste el Paso 1
                         newPlanet.tag = "Planet";
 
                         newPlanet.transform.parent = null;
 
-                        // Aplicar valores iniciales de los sliders al nacer
                         if (sliderEscala != null)
                             newPlanet.transform.localScale = Vector3.one * sliderEscala.value;
 
@@ -60,17 +57,13 @@ public class PlanetSpawner : MonoBehaviour
         }
     }
 
-    // --- VERSIÓN UNIVERSAL: Busca por TAG ---
 
     public void ActualizarEscala()
     {
-        // Buscamos TODOS los objetos que tengan el tag "Planet" en la escena
         GameObject[] planetasEnEscena = GameObject.FindGameObjectsWithTag("Planet");
 
         if (planetasEnEscena.Length == 0)
         {
-            // Solo advertimos si es la primera vez, para no llenar la consola
-            Debug.Log("⚠️ Slider movido, pero no encuentro objetos con Tag 'Planet'.");
             return;
         }
 

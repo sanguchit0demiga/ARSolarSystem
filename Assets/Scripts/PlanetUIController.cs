@@ -10,13 +10,11 @@ public class PlanetUIController : MonoBehaviour
 
         if (planets.Length == 0)
         {
-            Debug.Log("No hay planetas para eliminar.");
             return;
         }
 
         GameObject lastPlanet = planets[planets.Length - 1];
         Destroy(lastPlanet);
-        Debug.Log("Último planeta eliminado: " + lastPlanet.name);
     }
 
     public void DeleteAllPlanets()
@@ -26,6 +24,5 @@ public class PlanetUIController : MonoBehaviour
         foreach (GameObject planet in planets)
             Destroy(planet);
 
-        Debug.Log("Todos los planetas eliminados.");
     }
 }

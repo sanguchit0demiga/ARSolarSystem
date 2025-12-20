@@ -13,11 +13,9 @@ public class PlanetUIManager : MonoBehaviour
         {
             objectSpawner.spawnOptionIndex = prefabIndex;
             currentPlanet = objectSpawner.objectPrefabs[prefabIndex];
-            Debug.Log("Planeta seleccionado: " + currentPlanet.name);
         }
         else
         {
-            Debug.LogWarning("Prefab índice inválido o ObjectSpawner no asignado.");
         }
     }
 

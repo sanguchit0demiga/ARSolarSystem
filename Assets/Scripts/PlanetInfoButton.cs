@@ -13,7 +13,7 @@ public class PlanetInfoButton : MonoBehaviour
 
         if (planets.Length == 0)
         {
-            Debug.Log("No hay planeta spawneado aún.");
+           
             return;
         }
 
@@ -23,7 +23,6 @@ public class PlanetInfoButton : MonoBehaviour
 
         if (info == null)
         {
-            Debug.LogError("El planeta no tiene componente PlanetInfo.");
             return;
         }
 
@@ -31,6 +30,5 @@ public class PlanetInfoButton : MonoBehaviour
         nameText.text = info.planetName;
         descriptionText.text = info.description;
         planetUIImage.sprite = info.planetImage;
-        Debug.Log("Mostrando información de " + info.planetName);
     }
 }
